@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="./css/style4.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar and header content -->
+        {{>sidebar}}
+        <main>
+            {{>header}}
+            <div class="container11">
+                <form action="/addfeedback" method="GET" class="ContactForm">
+                    <h1 class="contactus-heading">Write your feedback</h1>
+                    <input name="email" type="email" class="feedback-input" placeholder="Email" required />
+                    <textarea name="feedback" class="feedback-input" placeholder="Enter Your Message"
+                        required></textarea>
+                    <input type="submit" value="Send">
+
+                    
+
+                    {{#if msg2}}
+                    <h1>Please register then send feedback</h1>
+                    {{/if}}
+                </form>
+
+            </div>
+        </main>
+        {{>right}}
+    </div>
+    <script src="./jsfile/script.js"></script>
+</body>
+
+</html>

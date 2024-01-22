@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Food Delivery App - Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Material icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    {{!--
+    <link rel="stylesheet" href="./css/style2.css"> --}}
+
+</head>
+
+<body>
+    <div class="container">
+        {{>sidebar}}
+        <main>
+            {{>header}}
+            <div class="container2">
+                <h2 style="color: blueviolet;">Sign Up</h2>
+                <form id="signupForm" action="/registercustomer">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter Name Here"><br><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter Email"><br><br>
+
+                    <label for="phone">Phone</label>
+                    <input type="text"  name="phone" required placeholder="Enter Phone Number"><br><br>
+
+                    <label for="age">Age</label>
+                    <input type="text" name="age" placeholder="Enter Age"><br><br>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+
+                    <label for="password">Confirm Password</label>
+                    <input type="password" id="password" name="cpassword" required
+                        placeholder="Confirm Password"><br><br>
+
+                    {{!-- <button type="button" onclick="signup()"></button> --}}
+                    <input type="submit" value="Register">
+
+                    {{#if mesg1}}
+                    <h3>Passwords are not matching</h3>
+                    {{/if}}
+
+                    {{#if mesg2}}
+                    <h3>User already exists please <button><a href="/login">login</a></button></h3>
+                    {{/if}}
+
+                    {{#if mesg3}}
+                    <h3>User registered please <a href="/login">login</a></h3>
+                    {{/if}}
+
+
+                </form>
+            </div>
+        </main>
+        {{>right}}
+    </div>
+    {{!-- <script src="./jsfile/script2.js"></script> --}}
+    <script src="./jsfile/script.js"></script>
+</body>
+
+</html>

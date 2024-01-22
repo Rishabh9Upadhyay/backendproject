@@ -1,0 +1,12 @@
+.feedback{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.feedback .f{
+    border: 1px solid #363949;
+    margin: 5px 4px;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}

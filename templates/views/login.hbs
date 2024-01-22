@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="container">
+        {{>sidebar}}
+
+        <main>
+            {{>header}}
+
+
+            <div class="container1">
+                <div class="AA" class="row my-5">
+                    <div class="col-sm-6 col-md-4 mx-auto">
+                        <div class="account-wall">
+                            <h1 class="A" class="text-center login-title my-5" style="margin-left: 60px;">User login
+                                form
+                            </h1>
+                            <img src="./img/logo5.webp" alt="" class="profile-img" style="border: 2px dashed;">
+                            <form action="/loginnow" class="form-signin" method="get">
+                                <input type="email" class="form-control" placeholder="Email*" name="email" required>
+                                <input type="password" name="password" class="form-control" required
+                                    placeholder="password*">
+                                {{!-- <button class="signbtn" type="submit" style="font-size: 15px;">Sign in</button> --}}
+                                <label class="checkbox pull-left mt-3">
+                                    <input type="checkbox" value="remember-me">
+                                    Remember me
+                                </label>
+                                <a href="#" class="pull-right need-help">Need Help</a><span class="clearfix"></span>
+                            <a href="/register" class="text-center new-account">Create an account</a>
+                                <button class="signbtn" type="submit" style="font-size: 15px;">Sign in</button> 
+                                {{#if mgsl}}
+                                <h3 style="margin: auto; font-size: 16px; color: blue;"><span class="material-symbols-outlined" style="font-size: 14px;">
+                                        warning
+                                    </span>Email or password is incurrect</h3>
+                                {{/if}}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {{>right}}
+    </div>
+    <script src="./jsfile/script.js"></script>
+</body>
+
+</html>

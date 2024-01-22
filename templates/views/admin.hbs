@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        main div{
+            text-align: center;
+        }
+        main div button{
+            font-size: 20px;
+            padding: 2px 5px;
+            margin: 5px;
+            
+            background: rgb(76, 80, 93);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{>sidebar}}
+        <main>
+            {{>header}}
+            <div>
+                <button><a href="/customers" class="aa" style="color: white;">See All Customers</a></button>
+            </div>
+            <div>
+                <button><a href="/order" class="aa" style="color: white;">See All Orders</a></button>
+            </div>
+        </main>
+        {{>right}}
+    </div>
+    <script src="./jsfile/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>DBMS Project</title>
+    <!-- Material icon -->
+    <style>
+        #fc, #fc1, #fc2, #fc3, #fc4{
+            
+            text-align: center;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="container">
+        
+        {{>sidebar}}
+        <!-- ********end of the aside*********** -->
+        <main>
+            {{!-- <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date" placeholder="date">
+            </div> --}}
+            {{>header}}
+            {{#if msgwr}}
+            <h1 id="fc4">You are not admin</h1>
+            {{/if}}
+            {{#if msglo}}
+            <h1 id="fc3">Please Login</h1>
+            {{/if}}
+            {{#if msg1}}
+                    <h1 id="fc">feedback added</h1>
+            {{/if}}
+            {{#if mesg11}}
+                <h1 id="fc1">Passwords are not matching</h1>
+            {{/if}}
+            {{#if msg12}}
+                <h1 id="fc2">Order Placed</h1>
+            {{/if}}
+
+            <div class="insights">
+                <div class="sales">
+                    <img src="./img/item1.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Dal Chaval</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 149 Only</small>
+                        <a href="/item1"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <img src="./img/item2.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Matar Paneer</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 199 Only</small>
+                        <a href="/item2"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="income">
+                    <img src="./img/item3.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Palak Paneer</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 199 Only</small>
+                        <a href="/item3"><button>Order Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <img src="./img/item4.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Noodales</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 99 Only</small>
+                        <a href="/item4"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <img src="./img/item5.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Manchurian</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 139 Only</small>
+                        <a href="/item5"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="income">
+                    <img src="./img/item6.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Kheer</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 249 Only</small>
+                        <a href="/item6"><button>Order Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="insights">
+                <div class="sales">
+                    <img src="./img/item7.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Sevai</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 219 Only</small>
+                        <a href="/item7"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <img src="./img/item9.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Murada Peda</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs.500/kg Only</small>
+                        <a href="/item9"><button>Order Now</button></a>
+                    </div>
+                </div>
+                <div class="income">
+                    <img src="./img/item8.jpeg" alt=""  class="item">
+                    <h2 class="h2item">Samoshe</h2>
+                    <div class="ordernow">
+                        <small class="text-muted">Rs. 20/peice</small>
+                        <a href="/item8"><button>Order Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85631</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!-- **********main done********* -->
+        {{>right}}
+    </div>
+    <script src="./jsfile/script.js"></script>
+    <script>
+        let a = document.getElementById("fc");
+        setTimeout(()=>{
+            a.style.display="none";
+        },2000)
+
+        let b = document.getElementById("fc1");
+        setTimeout(()=>{
+            b.style.display="none";
+        },2000)
+
+        let c = document.getElementById("fc2");
+        setTimeout(()=>{
+            c.style.display="none";
+        },2000)
+        
+    </script>
+</body>
+</html>
